@@ -299,6 +299,21 @@ Lemma reset_all_inputs_nsp_correct {data_t dims IdxEnv} {lcl : idx_t dims} (nsp 
   }#)) Q).
 ```
 
+```js
+function recolor(theme: any, shade: 1 | 2) {
+  return {
+    ...theme,
+    tokenColors: theme.tokenColors?.map((rule: any) => {
+      const scopes: string[] = (Array.isArray(rule.scope) ? rule.scope : [rule.scope]).filter(Boolean)
+      if (scopes.some(isComment)) return rule
+      const category = CATEGORIES.find(c => scopes.some(c.match))
+      if (!category || !rule.settings?.foreground) return rule
+      return { ...rule, settings: { ...rule.settings, foreground: category.color(shade) } }
+    }),
+  }
+}
+```
+
 ---
 
 # Images with captions
