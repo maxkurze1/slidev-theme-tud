@@ -1,6 +1,6 @@
 # slidev-theme-TUD-new
 
-A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/slidevjs/slidev).
+A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/slidevjs/slidev) (following the [new 2025 corporate desing](https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd)).
 
 <!--
   Put some screenshots here to demonstrate your theme
@@ -12,7 +12,7 @@ A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/sli
 
 
 `TODO`
-To see an example of how to use this theme please refer to [the example repository](https://gitlab.barkhauseninstitut.org/max.kurze/slidev-bi-example)
+~To see an example of how to use this theme please refer to [the example repository]()~
 
 If you really want to do it the hard way and wire things up manually
 then the following will try to give you some hints at least.
@@ -20,7 +20,7 @@ then the following will try to give you some hints at least.
 You can install this theme into an existing repository using
 
 ```bash
-$ pnpm install git+ssh://git@gitlab.barkhauseninstitut.org:max.kurze/slidev-theme-bi.git
+$ pnpm install git+ssh://git@github.com:maxkurze1/slidev-theme-TUD-new.git
 ```
 
 Then you should be able to use it by setting the `theme` in your frontmatter:
@@ -57,8 +57,4 @@ None
 - `pnpm install`
 - `pnpm run dev` to start theme preview of `example.md`
 - Edit the `example.md` and style to see the changes
-
-## Notes
-
-`./resources` is only used for development and not part of the theme
 
