@@ -1,4 +1,4 @@
-# slidev-theme-TUD-new
+# slidev-theme-tud
 
 A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/slidevjs/slidev) (following the [new 2025 corporate desing](https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd)).
 
@@ -20,14 +20,14 @@ then the following will try to give you some hints at least.
 You can install this theme into an existing repository using
 
 ```bash
-$ pnpm install git+ssh://git@github.com:maxkurze1/slidev-theme-TUD-new.git
+$ pnpm install git+ssh://git@github.com:maxkurze1/slidev-theme-tud.git
 ```
 
 Then you should be able to use it by setting the `theme` in your frontmatter:
 
 ```md
 ---
-theme: TUD-new
+theme: tud
 ---
 ```
 

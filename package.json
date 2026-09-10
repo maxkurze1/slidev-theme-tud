@@ -1,15 +1,25 @@
 {
-  "name": "slidev-theme-tud-new",
-  "version": "0.0.1",
+  "name": "slidev-theme-tud",
+  "version": "0.0.0",
   "type": "module",
   "packageManager": "pnpm@10.33.2",
-  "description": "Corporate barkhausen Institut theme for SliDev",
+  "description": "Corporate TUD theme for SliDev",
   "keywords": [
     "slidev-theme",
     "slidev",
     "TUD",
     "Dresden University of Technology"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxkurze1/slidev-theme-tud.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxkurze1/slidev-theme-tud/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=18.0.0"
   },

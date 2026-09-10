@@ -4,7 +4,7 @@
 #   • the VitePress docs  → <pages-url>/docs
 #   • the Slidev showcase → <pages-url>/demo
 # For a project page the site is served under /<repo>, so every base is
-# derived from BASE = "/slidev-theme-TUD-new".
+# derived from BASE = "/slidev-theme-tud".
 name: Deploy Pages
 
 on:
@@ -29,10 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Path component of the Pages URL for this project page.
-      BASE: /slidev-theme-TUD-new
+      BASE: /slidev-theme-tud
       # Absolute URL of the deck. config.ts passes this through as an external
       # link, so VitePress does NOT prefix it with the docs `base`.
-      DEMO_URL: https://maxkurze1.github.io/slidev-theme-TUD-new/demo/
+      DEMO_URL: https://maxkurze1.github.io/slidev-theme-tud/demo/
     steps:
       - uses: actions/checkout@v4
 
