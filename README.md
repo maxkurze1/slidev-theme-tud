@@ -10,17 +10,10 @@ A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/sli
 
 ## Usage
 
-
-`TODO`
-~To see an example of how to use this theme please refer to [the example repository]()~
-
-If you really want to do it the hard way and wire things up manually
-then the following will try to give you some hints at least.
-
 You can install this theme into an existing repository using
 
 ```bash
-$ pnpm install git+ssh://git@github.com:maxkurze1/slidev-theme-tud.git
+$ pnpm install slidev-theme-tud
 ```
 
 Then you should be able to use it by setting the `theme` in your frontmatter:
@@ -55,6 +48,6 @@ None
 ## Contributing
 
 - `pnpm install`
-- `pnpm run dev` to start theme preview of `example.md`
-- Edit the `example.md` and style to see the changes
+- `pnpm run dev` to start theme preview of `example.mdc`
+- Edit the `example.mdc` and style to see the changes
 

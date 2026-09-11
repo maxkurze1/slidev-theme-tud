@@ -17,6 +17,21 @@
   "bugs": {
     "url": "https://github.com/maxkurze1/slidev-theme-tud/issues"
   },
+  "files": [
+    "assets",
+    "components",
+    "layouts",
+    "scripts",
+    "setup",
+    "styles",
+    "global-bottom.vue",
+    "global-top.vue",
+    "markdown.ts",
+    "shims.d.ts",
+    "uno.config.ts",
+    "vite.config.ts",
+    "example.mdc"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -30,11 +45,11 @@
     "screenshot": "slidev export example.mdc --format png"
   },
   "dependencies": {
-    "dayjs": "^1.11.20",
-    "gsap": "^3.13.0",
-    "katex": "^0.16.33",
+    "dayjs": "^1.11.23",
+    "gsap": "^3.15.0",
+    "katex": "^0.16.47",
     "stylus": "^0.64.0",
-    "two.js": "^0.8.23"
+    "two.js": "^0.8.24"
   },
   "peerDependencies": {
     "slidev-component-progress": "*"
@@ -45,8 +60,8 @@
     }
   },
   "devDependencies": {
-    "@slidev/cli": "^52.1.0",
-    "@slidev/types": "^52.1.0",
+    "@slidev/cli": "^52.19.1",
+    "@slidev/types": "^52.19.1",
     "slidev-component-progress": "github:maxkurze1/slidev-component-progress"
   },
   "slidev": {

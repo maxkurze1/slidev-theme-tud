@@ -1,6 +1,6 @@
 import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import { setupFootnotes, setupFigureCaptions, setupTableCaptions } from './markdown'
+import { setupFootnotes, setupFigureCaptions, setupTableCaptions } from './markdown.ts'
 
 export default defineConfig({
   slidev: {
