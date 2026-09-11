@@ -4,7 +4,7 @@
 
 A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/slidevjs/slidev) (following the [new 2025 corporate desing](https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd)).
 
-![demo title slide](./screenshots/title-slide.svg)
+[![demo title slide](./docs/screenshots/title-slide.svg)](https://maxkurze1.github.io/slidev-theme-tud/)
 
 ## Usage
 
@@ -27,15 +27,7 @@ Slidev automatically appends the `slidev-theme-` prefix to find the correct pack
 
 ## Layouts
 
-This theme provides the following layouts:
-
-- `cover-blue`
-- `cover-white`
-- `cover`
-- `section-blue`
-- `section-white`
-- `section`
-- `default`
+See [docs/layouts.md](./docs/layouts.md) for a preview and usage example of each layout.
 
 ## Components
 
