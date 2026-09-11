@@ -1,12 +1,8 @@
 # slidev-theme-tud
 
+[![npm version](https://img.shields.io/npm/v/slidev-theme-tud?logo=npm)](https://www.npmjs.com/package/slidev-theme-tud)
+
 A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/slidevjs/slidev) (following the [new 2025 corporate desing](https://tu-dresden.de/tu-dresden/organisation/zentrale-universitaetsverwaltung/dezernat-7/sachgebiet-7-1-corporate-design/cd)).
-
-<!--
-  Put some screenshots here to demonstrate your theme
-
-  Live demo: [...]
--->
 
 ![demo title slide](./screenshots/title-slide.svg)
 
