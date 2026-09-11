@@ -6,7 +6,7 @@ This theme ships nine layouts. Every preview below is the corresponding slide of
 | Layout | Purpose |
 | --- | --- |
 | [`cover-white`](#cover-white) / [`cover-blue`](#cover-blue) / `cover` | Opening slide of a deck |
-| [`section-white`](#section-white) / [`section-blue`](#section-blue) / `section` | Plain chapter divider |
+| [`section-white` / `section-blue` / `section`](#section-white--section-blue) | Plain chapter divider |
 | [`section-n`](#section-n) | Chapter divider built from the TUD logo mark, six variants |
 | [`default`](#default) | Ordinary content slide |
 | [`cols`](#cols) | Content slide with side-by-side columns |
@@ -64,12 +64,25 @@ layout: "cover-blue"
 
 ## Sections
 
-### `section-white`
+Chapter dividers. `section-white` and `section-blue` (alias `section`) are plain
+backgrounds; `section-n` builds the divider from an oversized TUD logo mark,
+with `variant` (1–6) picking the composition.
 
-A divider that keeps the white background. The level-1 heading carries the
-chapter name, the level-2 heading an optional subtitle.
+| | |
+| --- | --- |
+| ![section-white layout](./screenshots/layout-section-white.svg) | ![section-blue layout](./screenshots/layout-section-blue.svg) |
+| `section-white` — plain white background | `section-blue` — the same on corporate blue, also available as `section` |
+| ![section-n variant 1](./screenshots/layout-section-n-1.svg) | ![section-n variant 2](./screenshots/layout-section-n-2.svg) |
+| `section-n` `variant: 1` — diagonal split, title top right, `detail` bottom left | `section-n` `variant: 2` — mark rotated in from the right, content on the left |
+| ![section-n variant 3](./screenshots/layout-section-n-3.svg) | ![section-n variant 4](./screenshots/layout-section-n-4.svg) |
+| `section-n` `variant: 3` — title top left, `detail` bottom right | `section-n` `variant: 4` — wedge from the right, content on the left |
+| ![section-n variant 5](./screenshots/layout-section-n-5.svg) | ![section-n variant 6](./screenshots/layout-section-n-6.svg) |
+| `section-n` `variant: 5` — mark centred behind centred text | `section-n` `variant: 6` — diagonal band behind centred text |
 
-![section-white layout](./screenshots/layout-section-white.svg)
+### `section-white` / `section-blue`
+
+Both take the chapter name as a level-1 heading and an optional subtitle as a
+level-2 heading:
 
 ```md
 ---
@@ -81,28 +94,11 @@ layout: "section-white"
 ## Using `section-white`
 ```
 
-### `section-blue`
-
-The same, on the corporate blue. Also available as `section`.
-
-![section-blue layout](./screenshots/layout-section-blue.svg)
-
-```md
----
-layout: "section"
----
-
-# And a blue section
-
-## Using `section` or `section-blue`
-```
-
 ### `section-n`
 
-Dividers built from an oversized TUD logo mark. `variant` (1–6) picks both the
-composition and, by default, a matching color combination.
-
-Variants 1 and 3 additionally place a `detail` slot in the opposite corner:
+`variant` picks both the composition and, by default, a matching color
+combination. Variants 1 and 3 additionally place a `detail` slot in the opposite
+corner:
 
 ```md
 ---
@@ -119,15 +115,6 @@ contextual information.
 
 This slide uses `section-n` with `variant: 1`.
 ```
-
-| | |
-| --- | --- |
-| ![section-n variant 1](./screenshots/layout-section-n-1.svg) | ![section-n variant 2](./screenshots/layout-section-n-2.svg) |
-| `variant: 1` — diagonal split, title top right, `detail` bottom left | `variant: 2` — mark rotated in from the right, content on the left |
-| ![section-n variant 3](./screenshots/layout-section-n-3.svg) | ![section-n variant 4](./screenshots/layout-section-n-4.svg) |
-| `variant: 3` — title top left, `detail` bottom right | `variant: 4` — wedge from the right, content on the left |
-| ![section-n variant 5](./screenshots/layout-section-n-5.svg) | ![section-n variant 6](./screenshots/layout-section-n-6.svg) |
-| `variant: 5` — mark centred behind centred text | `variant: 6` — diagonal band behind centred text |
 
 #### Colors
 
