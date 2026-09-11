@@ -8,6 +8,8 @@ A [TU Dresden](https://tu-dresden.de/) theme for [Slidev](https://github.com/sli
   Live demo: [...]
 -->
 
+![demo title slide](./screenshots/title-slide.svg)
+
 ## Usage
 
 You can install this theme into an existing repository using
