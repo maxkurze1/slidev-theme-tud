@@ -224,6 +224,11 @@ normal lists:
 
 ---
 
+<script setup>
+import { useFooter } from "./scripts/footer"
+const footer = useFooter({ template: null })
+</script>
+
 # Latex support
 
 Did you ever use google slides for a theoretical presentation?

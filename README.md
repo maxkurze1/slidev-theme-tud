@@ -35,6 +35,12 @@ This theme provides the following components:
 
 None
 
+## Composables
+
+The background, logos and footer of a slide can be changed from a layout or from
+a single slide. See [docs/composables.md](./docs/composables.md) for what each
+composable accepts.
+
 ## Contributing
 
 - `pnpm install`

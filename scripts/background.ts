@@ -1,21 +1,8 @@
 /// <reference types="vite/client" />
-import { reactive, toValue, watchEffect } from 'vue'
+import { toValue } from 'vue'
 import type { MaybeRefOrGetter } from 'vue'
-import { useSlideContext } from '@slidev/client'
+import { createRegistry } from './util'
 import { toCssColor, toRawColor } from './color'
-
-function createRegistry<T>() {
-  const store = reactive<Record<number, T>>({})
-
-  function publish(value: MaybeRefOrGetter<T>) {
-    const page = toValue(useSlideContext().$page)
-    watchEffect(() => {
-      store[page] = toValue(value)
-    })
-  }
-
-  return { store, publish }
-}
 
 const backgroundsReg = createRegistry<string>()
 export const slideBackgrounds = backgroundsReg.store

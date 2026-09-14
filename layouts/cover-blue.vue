@@ -29,10 +29,12 @@
 import { useSlideContext } from '@slidev/client'
 import { expandDateTokens } from '../scripts/util';
 import { useBackground, useLogo } from '../scripts/background'
+import { useFooter } from '../scripts/footer'
 import { computed, useSlots } from 'vue'
 
 useBackground('primary')
 useLogo({ text: 'white' })
+useFooter({ template: null, number: false })
 
 const slotTags = computed(() => (useSlots().default?.() || []).map(e => e.type));
 const { $slidev } = useSlideContext()

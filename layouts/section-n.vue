@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useBackground, useBackgroundLogo, useLogo, type BackgroundLogo, type MarkTransform } from '../scripts/background'
+import { useFooter } from '../scripts/footer'
 import { asIndex, resolveColorName, toCssColor } from '../scripts/color'
 
 const { variant = 1, colors = {} } = defineProps<{
@@ -42,6 +43,7 @@ const textColor = computed(() => resolveColorName(text, 'text', defaultIndex))
 const textCss = computed(() => toCssColor(textColor.value))
 
 useBackground(bgColor)
+useFooter({ template: null, number: false })
 
 // SVG is 100x100; slide is 1280x720, and the transform origin is (50,50).
 // Values feed MarkTransform (see scripts/background.ts): { scale, x, y, rotate? }.

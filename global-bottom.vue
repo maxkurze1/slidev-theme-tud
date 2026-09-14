@@ -20,8 +20,8 @@
     ></div>
 
     <footer class="absolute bottom-0 h-16 pb-[13px] pr-[64px] pl-[164px] flex items-baseline gap-x-6 w-full z-100">
-      <div :class="{'opacity-0': !show_footer}" class="duration-[0.5s] transition-opacity text-primary">
-        <div v-if="$slidev.configs.footer !== false" v-html="footer" class="whitespace-pre"></div>
+      <div :class="{'opacity-0': !footer}" class="duration-[0.5s] transition-opacity text-primary">
+        <div v-html="footer" class="whitespace-pre"></div>
       </div>
 
       <!-- Footnotes teleport target (see components/Footnotes.vue) -->
@@ -29,7 +29,7 @@
         <div :id="footnotesTargetId" class="absolute bottom-0 w-full min-h-full pb-2"></div>
       </div>
 
-      <div :class="{'opacity-0': !show_footer}" class="duration-[0.5s] transition-opacity w-[66px]">
+      <div :class="{'opacity-0': !show_number}" class="duration-[0.5s] transition-opacity w-[66px]">
         <div class="flex items-baseline justify-center">
           <span class="flex-1 text-right font-bold text-lg text-primary">{{ $nav.currentPage }}</span>
           <span :class="{ 'opacity-0': $nav.clicksTotal == 0 }" class="text-left text-gray text-xs">.</span>
@@ -45,6 +45,7 @@ import { computed, unref } from 'vue';
 import { expandDateTokens } from './scripts/util';
 import { formatString } from './scripts/util';
 import { slideBackgrounds, slideBgLogos, slideLogos } from './scripts/background';
+import { slideFooters, DEFAULT_FOOTER_TEMPLATE } from './scripts/footer';
 
 import rawLogo from './assets/TUD-logo-no-color.svg?raw';
 import rawLogoSmall from './assets/TUD-logo-text-small-no-color.svg?raw';
@@ -58,19 +59,26 @@ const footnotesTargetId = computed(() => `footnotes-containter-${unref(($nav as 
 
 const logos = computed(() => slideLogos[$nav.value.currentPage] ?? {})
 
-const show_footer = computed(() => !new Set(['cover', 'cover-blue', 'cover-white', 'section', 'section-blue', 'section-white', 'section-n']).has($nav.value.currentLayout))
+// Per-slide settings published via `useFooter()` (see scripts/footer.ts);
+// the layouts without room for a footer opt out there.
+const slideFooter = computed(() => slideFooters[$nav.value.currentPage] ?? {})
+
+const show_number = computed(() => slideFooter.value.number ?? true)
 
 const get_date = computed(() => {
   const d = ($slidev.configs as any).date
   return d ? expandDateTokens(String(d)) : d
 })
-const footer = computed(() => {
-  let fstring = "{title} • {author}"
-  return formatString(($slidev.configs as any).footer ?
-    ($slidev.configs as any).footer : fstring,
-    {...$slidev.configs, date: get_date.value}
-  )
+
+// slide (`useFooter`) > headmatter (`footer`, `false` for no text) > theme default
+const footer_template = computed(() => {
+  if (slideFooter.value.template !== undefined) return slideFooter.value.template
+  const configured = ($slidev.configs as any).footer
+  if (configured === false) return null
+  return configured ? String(configured) : DEFAULT_FOOTER_TEMPLATE
 })
+const footer = computed(() => footer_template.value === null ? ''
+  : formatString(footer_template.value, {...$slidev.configs, date: get_date.value}))
 
 const pageLogo = computed(() => slideBgLogos[$nav.value.currentPage])
 

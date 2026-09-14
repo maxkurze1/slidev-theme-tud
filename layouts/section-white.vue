@@ -9,8 +9,10 @@
 </template>
 <script setup lang="ts">
 import { useLogo } from '../scripts/background'
+import { useFooter } from '../scripts/footer'
 
 useLogo({ small: 'primary' })
+useFooter({ template: null, number: false })
 </script>
 <style>
 .slidev-layout.section-white {

@@ -10,8 +10,10 @@
 
 <script setup lang="ts">
 import { useBackground, useLogo } from '../scripts/background'
+import { useFooter } from '../scripts/footer'
 useBackground('primary')
 useLogo({ small: 'white' })
+useFooter({ template: null, number: false })
 // TODO generalize over bg color via parameter
 </script>
 
