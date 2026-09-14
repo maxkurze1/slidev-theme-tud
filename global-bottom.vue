@@ -21,9 +21,7 @@
 
     <footer class="absolute bottom-0 h-16 pb-[13px] pr-[64px] pl-[164px] flex items-baseline gap-x-6 w-full z-100">
       <div :class="{'opacity-0': !show_footer}" class="duration-[0.5s] transition-opacity text-primary">
-        <div v-if="$slidev.configs.footer !== false" class="whitespace-pre">
-          {{ footer }}
-        </div>
+        <div v-if="$slidev.configs.footer !== false" v-html="footer" class="whitespace-pre"></div>
       </div>
 
       <!-- Footnotes teleport target (see components/Footnotes.vue) -->

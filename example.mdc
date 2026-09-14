@@ -3,10 +3,10 @@ theme: ./
 # Hash-based routing to make reload work on GitHub Pages
 routerMode: hash
 # layout: "cover"
-author: "Your Name"
+author: "Someone else, <u>Your Name</u>, Your Prof."
 title: "Some very catchy title"
 subtitle: "With a sub-title"
-group: "Verified System Design Automation"
+group: "Here goes your group"
 location: "Dresden"
 
 # Use single quotes so YAML keeps the backslash literally (double quotes turn \t etc. into escapes).
