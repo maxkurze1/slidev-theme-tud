@@ -1,13 +1,13 @@
 # Layouts
 
-This theme ships nine layouts. Every preview below is the corresponding slide of
+This theme ships fourteen layouts. Every preview below is the corresponding slide of
 [`example.mdc`](../example.mdc), which you can run locally with `pnpm run dev`.
 
 | Layout | Purpose |
 | --- | --- |
 | [`cover-white`](#cover-white) / [`cover-blue`](#cover-blue) / `cover` | Opening slide of a deck |
 | [`section-white` / `section-blue` / `section`](#section-white--section-blue) | Plain chapter divider |
-| [`section-n`](#section-n) | Chapter divider built from the TUD logo mark, six variants |
+| [`section-1` … `section-6`](#section-1--section-6) | Chapter divider built from the TUD logo mark, six compositions |
 | [`default`](#default) | Ordinary content slide |
 | [`cols`](#cols) | Content slide with side-by-side columns |
 
@@ -65,19 +65,19 @@ layout: "cover-blue"
 ## Sections
 
 Chapter dividers. `section-white` and `section-blue` (alias `section`) are plain
-backgrounds; `section-n` builds the divider from an oversized TUD logo mark,
-with `variant` (1–6) picking the composition.
+backgrounds; `section-1` … `section-6` build the divider from an oversized TUD
+logo mark, each one a different composition.
 
 | | |
 | --- | --- |
 | ![section-white layout](./screenshots/layout-section-white.svg) | ![section-blue layout](./screenshots/layout-section-blue.svg) |
 | `section-white` — plain white background | `section-blue` — the same on corporate blue, also available as `section` |
-| ![section-n variant 1](./screenshots/layout-section-n-1.svg) | ![section-n variant 2](./screenshots/layout-section-n-2.svg) |
-| `section-n` `variant: 1` — diagonal split, title top right, `detail` bottom left | `section-n` `variant: 2` — mark rotated in from the right, content on the left |
-| ![section-n variant 3](./screenshots/layout-section-n-3.svg) | ![section-n variant 4](./screenshots/layout-section-n-4.svg) |
-| `section-n` `variant: 3` — title top left, `detail` bottom right | `section-n` `variant: 4` — wedge from the right, content on the left |
-| ![section-n variant 5](./screenshots/layout-section-n-5.svg) | ![section-n variant 6](./screenshots/layout-section-n-6.svg) |
-| `section-n` `variant: 5` — mark centred behind centred text | `section-n` `variant: 6` — diagonal band behind centred text |
+| ![section-1 layout](./screenshots/layout-section-1.svg) | ![section-2 layout](./screenshots/layout-section-2.svg) |
+| `section-1` — diagonal split, title top right, `detail` bottom left | `section-2` — mark rotated in from the right, content on the left |
+| ![section-3 layout](./screenshots/layout-section-3.svg) | ![section-4 layout](./screenshots/layout-section-4.svg) |
+| `section-3` — title top left, `detail` bottom right | `section-4` — wedge from the right, content on the left |
+| ![section-5 layout](./screenshots/layout-section-5.svg) | ![section-6 layout](./screenshots/layout-section-6.svg) |
+| `section-5` — mark centred behind centred text | `section-6` — diagonal band behind centred text |
 
 ### `section-white` / `section-blue`
 
@@ -94,16 +94,15 @@ layout: "section-white"
 ## Using `section-white`
 ```
 
-### `section-n`
+### `section-1` … `section-6`
 
-`variant` picks both the composition and, by default, a matching color
-combination. Variants 1 and 3 additionally place a `detail` slot in the opposite
-corner:
+The number picks both the composition and, by default, a matching color
+combination. `section-1` and `section-3` additionally place a `detail` slot in
+the opposite corner:
 
 ```md
 ---
-layout: "section-n"
-variant: 1
+layout: "section-1"
 ---
 
 # Here is the title of the section
@@ -113,12 +112,12 @@ contextual information.
 
 ::detail::
 
-This slide uses `section-n` with `variant: 1`.
+This slide uses the `section-1` layout.
 ```
 
 #### Colors
 
-Each variant defaults to the color combination of the same number:
+Each layout defaults to the color combination of the same number:
 
 | # | Background | Logo mark | Text |
 | --- | --- | --- | --- |
@@ -135,8 +134,7 @@ another combination:
 
 ```md
 ---
-layout: "section-n"
-variant: 3
+layout: "section-3"
 colors:
   bg: "green-2"
   logo: "green"
@@ -147,14 +145,13 @@ colors:
 ```
 
 Passing a number to `bg` or `logo` switches the whole combination, so the
-geometry of one variant can be paired with the colors of another:
+geometry of one layout can be paired with the colors of another:
 
 ```md
 ---
-layout: "section-n"
-variant: 6      # composition of variant 6
+layout: "section-6"   # composition of section 6
 colors:
-  bg: 4         # ... with the colors of combination 4
+  bg: 4               # ... with the colors of combination 4
 ---
 ```
 

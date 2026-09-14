@@ -59,7 +59,9 @@ const progressProps = {
   emptyFirst: true,
   scale: 'clicks',
   disable: (layout: string) =>
-    new Set(['cover', 'cover-blue', 'cover-white', 'section', 'section-blue', 'section-white', 'section-n']).has(layout),
+    new Set(['cover', 'cover-blue', 'cover-white', 'section', 'section-blue', 'section-white', 'section-n',
+      'section-1', 'section-2', 'section-3', 'section-4', 'section-5', 'section-6',
+    ]).has(layout),
 }
 </script>
 

@@ -1,3 +1,5 @@
+<!-- Internal: use the `section-1` … `section-6` layouts instead,
+     which alias this one with the matching `variant`. -->
 <template>
   <div class="h-full">
     <div class="slidev-layout section-n" :class="`section-${variant}`" :style="{ '--section-text': textCss }">

@@ -58,8 +58,7 @@ layout: "section"
 ## Using `section` or `section-blue`
 
 ---
-layout: "section-n"
-variant: 1
+layout: "section-1"
 ---
 
 
@@ -72,11 +71,10 @@ You can customize the colors within the TUD color set.
 
 ::detail::
 
-This slide uses `section-n` with `variant: 1`.
+This slide uses the `section-1` layout.
 
 ---
-layout: "section-n"
-variant: 2
+layout: "section-2"
 ---
 
 
@@ -88,12 +86,11 @@ contextual information.
 
 You can customize the colors within the TUD color set.
 
-This slide uses `section-n` with `variant: 2`.
+This slide uses the `section-2` layout.
 
 
 ---
-layout: "section-n"
-variant: 3
+layout: "section-3"
 ---
 
 
@@ -107,37 +104,34 @@ You can customize the colors within the TUD color set.
 
 ::detail::
 
-This slide uses `section-n` with `variant: 3`.
+This slide uses the `section-3` layout.
 
 ---
-layout: "section-n"
-variant: 4
----
-
-
-# Another section
-
-## Using `section-n` with `variant: 4`
-
----
-layout: "section-n"
-variant: 5
+layout: "section-4"
 ---
 
 
 # Another section
 
-## Using `section-n` with `variant: 5`
+## Using `section-4`
 
 ---
-layout: "section-n"
-variant: 6
+layout: "section-5"
 ---
 
 
 # Another section
 
-## Using `section-n` with `variant: 6`
+## Using `section-5`
+
+---
+layout: "section-6"
+---
+
+
+# Another section
+
+## Using `section-6`
 
 ---
 
