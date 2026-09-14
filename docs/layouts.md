@@ -2,6 +2,8 @@
 
 This theme ships fourteen layouts. Every preview below is the corresponding slide of
 [`example.mdc`](../example.mdc), which you can run locally with `pnpm run dev`.
+Click a preview to open that slide in the
+[hosted demo](https://maxkurze1.github.io/slidev-theme-tud/demo/).
 
 | Layout | Purpose |
 | --- | --- |
@@ -34,7 +36,7 @@ layout: "cover-white"
 
 ### `cover-white`
 
-![cover-white layout](./screenshots/layout-cover-white.svg)
+[![cover-white layout](./screenshots/layout-cover-white.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/1)
 
 ```md
 ---
@@ -52,7 +54,7 @@ layout: "cover-white"
 The same layout on the corporate blue, with the full logo reversed to white.
 Also available as `cover`.
 
-![cover-blue layout](./screenshots/layout-cover-blue.svg)
+[![cover-blue layout](./screenshots/layout-cover-blue.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/2)
 
 ```md
 ---
@@ -70,13 +72,13 @@ logo mark, each one a different composition.
 
 | | |
 | --- | --- |
-| ![section-white layout](./screenshots/layout-section-white.svg) | ![section-blue layout](./screenshots/layout-section-blue.svg) |
+| [![section-white layout](./screenshots/layout-section-white.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/3) | [![section-blue layout](./screenshots/layout-section-blue.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/4) |
 | `section-white` — plain white background | `section-blue` — the same on corporate blue, also available as `section` |
-| ![section-1 layout](./screenshots/layout-section-1.svg) | ![section-2 layout](./screenshots/layout-section-2.svg) |
+| [![section-1 layout](./screenshots/layout-section-1.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/5) | [![section-2 layout](./screenshots/layout-section-2.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/6) |
 | `section-1` — diagonal split, title top right, `detail` bottom left | `section-2` — mark rotated in from the right, content on the left |
-| ![section-3 layout](./screenshots/layout-section-3.svg) | ![section-4 layout](./screenshots/layout-section-4.svg) |
+| [![section-3 layout](./screenshots/layout-section-3.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/7) | [![section-4 layout](./screenshots/layout-section-4.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/8) |
 | `section-3` — title top left, `detail` bottom right | `section-4` — wedge from the right, content on the left |
-| ![section-5 layout](./screenshots/layout-section-5.svg) | ![section-6 layout](./screenshots/layout-section-6.svg) |
+| [![section-5 layout](./screenshots/layout-section-5.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/9) | [![section-6 layout](./screenshots/layout-section-6.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/10) |
 | `section-5` — mark centred behind centred text | `section-6` — diagonal band behind centred text |
 
 ### `section-white` / `section-blue`
@@ -163,7 +165,7 @@ The layout used when no `layout` is given. Headings, lists, tables, code blocks,
 LaTeX and footnotes all render here — see the second half of
 [`example.mdc`](../example.mdc) for the full set.
 
-![default layout](./screenshots/layout-default.svg)
+[![default layout](./screenshots/layout-default.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/11)
 
 ```md
 ---
@@ -181,7 +183,7 @@ width, each `::col-N::` slot becomes a column ordered by its number regardless
 of where it appears in the file, and `::bottom::` spans the full width again
 underneath.
 
-![cols layout](./screenshots/layout-cols.svg)
+[![cols layout](./screenshots/layout-cols.svg)](https://maxkurze1.github.io/slidev-theme-tud/demo/#/15)
 
 ```md
 ---
