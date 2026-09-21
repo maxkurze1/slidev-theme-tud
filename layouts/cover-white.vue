@@ -16,7 +16,7 @@
 
         <div class="name absolute bottom-[120px] text-gray">
           <div v-if="!slotTags.includes('p')">
-            <p class="!text-2xl !m-0 font-bold" :innerHTML="$slidev.configs.author"></p>
+            <p class="!text-2xl !m-0 font-bold" v-html="$slidev.configs.author"></p>
             <p class="!m-0 !text-sm">{{ $slidev.configs.group }}</p>
           </div>
           <component v-else v-for="node in get_slot('p')" class="!m-0 !text-sm" :is="node" :key="node.key"/>
