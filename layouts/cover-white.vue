@@ -4,7 +4,7 @@
       <div class="content p-[64px]">
 
         <div class="title absolute bottom-[340px] w-full">
-          <div class="date absolute top-0 -translate-y-full text-gray text-md">{{ get_date }}</div>
+          <div class="date absolute top-0 -translate-y-full text-gray text-md">{{ get_date_line }}</div>
           <h1 v-if="!slotTags.includes('h1')"> {{ $slidev.configs.title }} </h1>
           <component v-else v-for="node in get_slot('h1')" :is="node" :key="node.key"/>
 
@@ -46,6 +46,10 @@ const get_date = computed(() => {
   const d = $slidev.configs.date
   return d ? expandDateTokens(String(d)) : d
 })
+
+const get_date_line = computed(() =>
+  [$slidev.configs.location, get_date.value].filter(Boolean).join(' • ')
+)
 </script>
 
 <style scoped>

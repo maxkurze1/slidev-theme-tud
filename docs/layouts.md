@@ -30,6 +30,8 @@ author: "Your Name"
 group: "Verified System Design Automation"
 # \today renders the current date; \today[YYYY-MM-DD] takes any day.js format
 date: '\today'
+# optional, shown as "Location • Date"
+location: "Dresden"
 layout: "cover-white"
 ---
 ```
