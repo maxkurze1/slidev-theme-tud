@@ -53,7 +53,7 @@ const get_date_line = computed(() =>
 )
 </script>
 
-<style scoped lang="stylus">
+<style scoped>
 .content {
   .title :deep(h1) {
     @apply my-1;

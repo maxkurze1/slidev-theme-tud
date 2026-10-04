@@ -31,8 +31,3 @@ const orderedCols = computed(() => {
     .sort((a, b) => a.num - b.num);
 });
 </script>
-<style lang="stylus">
-.slidev-layout.layout-cols col {
-  h1 {}
-}
-</style>
