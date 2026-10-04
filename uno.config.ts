@@ -17,7 +17,13 @@ const primaryClasses = paletteNames.map((name) =>
 )
 
 export default defineConfig({
-  theme: { colors },
+  theme: {
+    colors: {
+      ...colors,
+      // e.g. bg-var-primary, border-l-var-primary — follows --slidev-theme-primary
+      var: { primary: 'var(--slidev-theme-primary)' },
+    },
+  },
   preflights: [
     { getCSS: () => `:root {\n  ${paletteVars.join('\n  ')}\n}` },
     { getCSS: () => primaryClasses.join('\n') },

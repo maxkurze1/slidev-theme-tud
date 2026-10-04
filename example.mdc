@@ -211,7 +211,7 @@ normal lists:
 
   ## Tables
 
-  ::div
+  ::div{.green}
   | Left Align | Center Align | Right Align |
   |:-----------|:------------:|------------:|
   | 1          |      1       |           1 |
@@ -276,6 +276,10 @@ This shows in the middle in magenta
 ::div{.violet}
 > # The `bottom` slot
 >
+> This is shown on the bottom (below the columns) and spans the whole slide again.
+::
+
+::div{.green}
 > This is shown on the bottom (below the columns) and spans the whole slide again.
 ::
 
